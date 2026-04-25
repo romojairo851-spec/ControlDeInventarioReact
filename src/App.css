@@ -1,0 +1,159 @@
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --sidebar-width: 260px;
+  --bg-color: #f3f4f6;
+  --sidebar-bg: #0b43fc;
+  --sidebar-hover: #5555eb;
+  --sidebar-text: #a1a5b7;
+  --sidebar-text-active: #ffffff;
+  --primary-color: #4f46e5;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+}
+
+.layout-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  background-color: var(--sidebar-bg);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  box-shadow: 2px 0 5px rgba(2, 100, 236, 0.1);
+  z-index: 100;
+}
+
+.sidebar-header {
+  padding: 1.5rem;
+  text-align: center;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 1rem 0;
+  margin: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-menu li {
+  padding: 1rem 1.5rem;
+  color: var(--sidebar-text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.sidebar-menu li:hover {
+  background-color: var(--sidebar-hover);
+  color: var(--sidebar-text-active);
+}
+
+.sidebar-menu li.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-left: 4px solid #818cf8;
+}
+
+.sidebar-menu li.logout {
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: #ef4444;
+}
+
+.sidebar-menu li.logout:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.layout-main {
+  margin-left: var(--sidebar-width);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-header {
+  padding: 2rem;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.company-logo {
+  height: 60px;
+  margin-bottom: 0.5rem;
+}
+
+.main-header h1 {
+  margin: 0;
+  color: #111827;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+}
+
+.content-area {
+  padding: 2rem;
+  flex-grow: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.placeholder-content {
+  background: white;
+  padding: 4rem;
+  border-radius: 12px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* PrimeReact Overrides */
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.p-toolbar {
+  border: none;
+  background: white;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+}
+
+.p-datatable .p-datatable-header {
+  border: none;
+  background: white;
+}
