@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // URL backend 
-const API_URL = "http://localhost:8081/usuarios";
+const API_URL = "https://controldeinventarioexpressmongo1.onrender.com";
 
 class UsuarioService {
 
